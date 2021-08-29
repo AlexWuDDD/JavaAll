@@ -30,4 +30,9 @@ public class PrimeNumberTest {
         }
         return true;
     }
+
+    private static boolean isPrime3(int i){
+        
+        return false;
+    }
 }
