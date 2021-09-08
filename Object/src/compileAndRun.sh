@@ -12,5 +12,8 @@
 # javac -d . com/alex/ooptest/CustomerTest.java
 # java com.alex.ooptest.CustomerTest
 
-javac -d . com/alex/test/StudentTest.java
-java com.alex.test.StudentTest
+# javac -d . com/alex/test/StudentTest.java
+# java com.alex.test.StudentTest
+
+javac -d . com/alex/ooptest/ArrayUtilTest.java
+java com.alex.ooptest.ArrayUtilTest
