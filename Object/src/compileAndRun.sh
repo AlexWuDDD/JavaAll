@@ -30,5 +30,8 @@
 # javac -d . com/alex/test/RecurisonTest.java
 # java com.alex.test.RecurisonTest
 
-javac -d . com/alex/test2/AnimalTest.java
-java com.alex.test2.AnimalTest
+# javac -d . com/alex/test2/AnimalTest.java
+# java com.alex.test2.AnimalTest
+
+javac -d . com/alex/test2/PersonTest.java
+java com.alex.test2.PersonTest
