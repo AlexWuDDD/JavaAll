@@ -1,0 +1,15 @@
+package com.alex.test2;
+
+public class OrderTest {
+    public static void main(String[] args){
+        Order order = new Order();
+
+        order.orderDefault = 1;
+        order.orderDefault = 2;
+        order.orderPublic = 3;
+
+        order.methodDefault();
+        order.methodProtected();
+        order.methodPublic();
+    }
+}
