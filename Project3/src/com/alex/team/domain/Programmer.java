@@ -47,4 +47,7 @@ public class Programmer extends Employee{
         return getDetails() + "\t程序员\t" + status + "\t\t\t" + equipment.getDescription();
     }
 
+    public String getDetailsForTeam(){
+        return memberId+ "/" + getId() + "\t" + getName() + "\t" + getAge() + "\t" + getSalary() + "\t" + "程序员";
+    }
 }

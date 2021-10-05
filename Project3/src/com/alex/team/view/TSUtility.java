@@ -46,7 +46,7 @@ public class TSUtility{
         for(;;){
             String str = readKeyBoard(1, false).toUpperCase();
             c = str.charAt(0);
-            if(c == 'Y' && c == 'N'){
+            if(c == 'Y' || c == 'N'){
                 break;
             }
             else{

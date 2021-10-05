@@ -25,4 +25,9 @@ public class Designer extends Programmer{
         return getDetails() + "\t设计师\t"  + getStatus() + "\t" + bonus + "\t\t" + getEquipment().getDescription();
     }
 
+    @Override
+    public String getDetailsForTeam(){
+        return getMemberid()+ "/" + getId() + "\t" + getName() + "\t" + getAge() + "\t" + getSalary() + "\t" + "设计师" + "\t" + bonus;
+    }
+
 }
