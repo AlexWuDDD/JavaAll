@@ -7,16 +7,26 @@ package com.alex.java;
 class Window extends Thread{
     
     private static int ticket = 100;
+    // private static Object obj = new Object();
 
     @Override
     public void run() {
         while(true){
-            if(ticket > 0){
-                System.out.println(getName() + ": 卖票，票号为：" + ticket);
-                --ticket;
-            }
-            else{
-                break;
+            synchronized(Window.class){
+                if(ticket > 0){
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    System.out.println(getName() + ": 卖票，票号为：" + ticket);
+                    --ticket;
+                }
+                else{
+                    break;
+                
+                }
             }
         }
     }
