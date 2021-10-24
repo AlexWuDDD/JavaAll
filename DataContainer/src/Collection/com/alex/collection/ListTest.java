@@ -64,6 +64,7 @@ public class ListTest {
         list.add(456);
         list.add("AA");
         list.add(new Person("Tom", 20));
+        list.add(new Person("Tom", 20));
         list.add(456);
 
         int index = list.indexOf("AA");
