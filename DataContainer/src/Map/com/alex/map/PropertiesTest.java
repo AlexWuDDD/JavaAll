@@ -1,4 +1,4 @@
-// package Map.com.alex.map;
+package Map.com.alex.map;
 
 import java.io.FileInputStream;
 import java.util.Properties;
