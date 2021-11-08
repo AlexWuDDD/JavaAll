@@ -18,7 +18,11 @@ public class ObjectInputOutputStreamTest {
         try{
             oos = new ObjectOutputStream(new FileOutputStream(rootPath + "/object.txt"));
             oos.writeObject(new String("我爱北京天安门"));
-        
+            oos.flush();
+
+            oos.writeObject(new Person("王铭", 25));
+            oos.flush();
+
         }
         catch(Exception e){
             System.out.println(e.getMessage());
@@ -42,6 +46,9 @@ public class ObjectInputOutputStreamTest {
             ois = new ObjectInputStream(new FileInputStream(rootPath + "/object.txt"));
             String content = (String)ois.readObject();
             System.out.println(content);
+
+            Person person = (Person)ois.readObject();
+            System.out.println(person);
         
         }
         catch(Exception e){
