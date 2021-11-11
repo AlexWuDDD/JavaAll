@@ -2,6 +2,7 @@ package com.alex.java;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
@@ -29,9 +30,13 @@ public class ClassLoaderTest {
         BufferedReader br = null;
         try{
             Properties pros = new Properties();
-            fis = new FileInputStream("/Users/alexwu/Documents/JavaNotes/Reflection/src/jdbc.properties");
-            br = new BufferedReader(new InputStreamReader(fis, "utf-8"));
-            pros.load(br);
+            // fis = new FileInputStream("/Users/alexwu/Documents/JavaNotes/Reflection/src/jdbc.properties");
+            // br = new BufferedReader(new InputStreamReader(fis, "utf-8"));
+            // pros.load(br);
+
+            ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();
+            InputStream is = classLoader.getResourceAsStream("jdbc.properties");
+            pros.load(is);
 
             String user = pros.getProperty("user");
             String password = pros.getProperty("password");
