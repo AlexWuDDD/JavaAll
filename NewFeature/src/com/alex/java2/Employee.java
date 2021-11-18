@@ -2,7 +2,7 @@ package com.alex.java2;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
     
     private int id;
     private String name;
@@ -42,6 +42,10 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastName() {
+        return this.name.charAt(0) + "";
     }
 
     public int getAge() {
@@ -86,6 +90,11 @@ public class Employee {
             ", age='" + getAge() + "'" +
             ", salary='" + getSalary() + "'" +
             "}";
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return Integer.compare(this.age, o.age);
     }
 
 }
